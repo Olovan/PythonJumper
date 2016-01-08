@@ -109,18 +109,18 @@ def game_Loop():
 					player.Jump(deltaTime)
 		
 		
-		list_rects = []
+		list_rects = [] #List of Rectangles for the screen to update
 		
-		list_rects.append(player.rect())
+		list_rects.append(player.rect()) #Store old positions to be updated on the screen so we don't leave a streak of old positions on the window
 		list_rects.append(enemy.rect())
 		
 		player.update(deltaTime)
 		enemy.update(deltaTime)
 		
-		list_rects.append(player.rect())
+		list_rects.append(player.rect()) #Store new positions so that the new position actually gets drawn
 		list_rects.append(enemy.rect())
 		
-		if player.rect().colliderect(enemy.rect()):
+		if player.rect().colliderect(enemy.rect()): #check for collision
 			break
 		
 		display.fill((140,140,140))
