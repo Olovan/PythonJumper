@@ -16,7 +16,7 @@ enemy_Speed = 600
 display = pygame.display.set_mode((window_width, window_height))
 clock = pygame.time.Clock()
 enemyImage = pygame.image.load("SpaceShip3.png")
-playerImage = pygame.image.load("1.png")
+playerImage = pygame.image.load("2.png")
 playerImage = pygame.transform.scale(playerImage,(48,48))
 
 
